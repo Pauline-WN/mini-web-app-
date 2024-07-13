@@ -1,9 +1,11 @@
+// Define the array to store shopping list items
 let shoppingList = [];
 
 const itemInput = document.getElementById('itemInput');
 const addButton = document.getElementById('addButton');
+const markPurchasedButton = document.getElementById('markPurchasedButton');
 const shoppingListElement = document.getElementById('shoppingList');
-const deleteButton = document.getElementById('deleteButton');
+const clearButton = document.getElementById('clearButton');
 
 // Add item to the list function
 function addItem() {
@@ -42,6 +44,16 @@ function markPurchased(index) {
     listItem.classList.toggle('purchased');
 }
 
+// Function to mark all items as purchased
+function markAllPurchased() {
+    shoppingList.forEach((_, index) => {
+        const listItem = shoppingListElement.children[index];
+        if (!listItem.classList.contains('purchased')) {
+            listItem.classList.add('purchased');
+        }
+    });
+}
+
 // Function to delete list
 function deleteList() {
     shoppingList = [];
@@ -73,7 +85,7 @@ window.onload = function() {
     }
 };
 
-// Attach event listeners to buttons
+// Attaching event listeners to buttons
 addButton.addEventListener('click', addItem);
 deleteButton.addEventListener('click', deleteList);
 renderList();
