@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: azure;
+}
+
+h1 {
+    color: black;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    font-size: 16px;
+    background-color: beige;
+    margin-bottom: 5px;
+    border: 1px solid 
+    cursor: pointer;
+}
+
+li.purchased {
+    text-decoration: line-through;
+    background-color: antiquewhite
+}
+
+button:hover {
+    background-color: aliceblue
+}
